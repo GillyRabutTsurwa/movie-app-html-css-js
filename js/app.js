@@ -100,3 +100,8 @@ ELEMENTS.optionsList.forEach((currentOption) => {
     fetchMovies(movieURLKeyAndValue[objValueIndex]);
   });
 });
+
+window.addEventListener("DOMContentLoaded", () => {
+  // so that when the window is opened, we are starting by showing the most popular movies (something instead of showing nothing and leaving all that blank space, which looks ugly)
+  fetchMovies(URLS.popularMovies);
+});
